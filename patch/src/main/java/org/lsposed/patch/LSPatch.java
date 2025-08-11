@@ -354,6 +354,7 @@ public class LSPatch {
         property.addApplicationAttribute(new AttributeItem(NodeValue.Application.DEBUGGABLE, debuggableFlag));
         property.addApplicationAttribute(new AttributeItem("appComponentFactory", PROXY_APP_COMPONENT_FACTORY));
         property.addMetaData(new ModificationProperty.MetaData("lspatch", metadata));
+        // 添加所有存储权限
         property.addUsesPermission("android.permission.READ_EXTERNAL_STORAGE");
         property.addUsesPermission("android.permission.WRITE_EXTERNAL_STORAGE");
         property.addUsesPermission("android.permission.MANAGE_EXTERNAL_STORAGE");
