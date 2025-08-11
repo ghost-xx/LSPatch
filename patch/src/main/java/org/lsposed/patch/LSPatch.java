@@ -354,6 +354,9 @@ public class LSPatch {
         property.addApplicationAttribute(new AttributeItem(NodeValue.Application.DEBUGGABLE, debuggableFlag));
         property.addApplicationAttribute(new AttributeItem("appComponentFactory", PROXY_APP_COMPONENT_FACTORY));
         property.addMetaData(new ModificationProperty.MetaData("lspatch", metadata));
+        property.addUsesPermission("android.permission.READ_EXTERNAL_STORAGE");
+        property.addUsesPermission("android.permission.WRITE_EXTERNAL_STORAGE");
+        property.addUsesPermission("android.permission.MANAGE_EXTERNAL_STORAGE");
         // TODO: replace query_all with queries -> manager
         if (useManager)
             property.addUsesPermission("android.permission.QUERY_ALL_PACKAGES");
